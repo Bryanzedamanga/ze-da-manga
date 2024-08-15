@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigadeiro Mania</title>
+    <style>
+        body {
+            background: linear-gradient(to right, blue, purple);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #ff0000;
+            padding: 10px;
+        }
+        header h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ff0000;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .notification {
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid red;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        #home {
+            display: block;
+        }
+        .brigadeiros {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .brigadeiro {
+            background-color: #fff;
+            color: black;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .brigadeiro img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #ff0000;
+            padding: 10px;
+        }
+        footer p {
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form input, form textarea {
+            margin: 5px;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+        form button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Brigadeiro Mania</h1>
+        <h2>A doce que dá mania!</h2>
+    </header>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('types')">Tipos de Brigadeiros</a>
+        <a onclick="showSection('contact')">Contato</a>
+        <a onclick="showSection('notifications')">Notificações</a>
+    </nav>
+    <section id="home">
+        <h2>Bem-vindo ao Brigadeiro Mania!</h2>
+        <p>Explore nossos deliciosos brigadeiros.</p>
+    </section>
+    <section id="types">
+        <h2>Nossos Brigadeiros</h2>
+        <div class="brigadeiros">
+            <div class="brigadeiro">
+                <img src="brigadeiro1.jpg" alt="Brigadeiro Tradicional">
+                <h3>Brigadeiro Tradicional</h3>
+                <p>O clássico brigadeiro feito com chocolate ao leite.</p>
+            </div>
+            <div class="brigadeiro">
+                <img src="brigadeiro2.jpg" alt="Brigadeiro Gourmet">
+                <h3>Brigadeiro Gourmet</h3>
+                <p>Feito com chocolate belga para um sabor inesquecível.</p>
+            </div>
+            <!-- Adicione mais brigadeiros conforme necessário -->
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <section id="notifications">
+        <h2>Notificações</h2>
+        <div class="notification">
+            <p>Notificação importante sobre promoções e novidades!</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Brigadeiro Mania. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas as seções
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Exibe a seção selecionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
